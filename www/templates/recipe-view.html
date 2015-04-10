@@ -1,0 +1,85 @@
+<div class="container">
+<a ui-sref="recipes"><img ng-src={{recipeimg}}></img></a>
+<h3 ng-repeat="info in ingredientinfo track by $index">
+ {{info}}
+ </h3>
+<hr class="line" ></hr>
+<!--INGREDIENTS-->
+<div class="col-md-6">
+<ul>
+  <li ng-repeat="ingredient in ingredients" ng-if="ingredient" class="animate">
+    {{ingredient}}
+  </li>
+</ul>
+</div>
+<!--STAGES-->
+<div class="col-md-6">
+<ul class="stages scrollbar" >
+  <li ng-repeat="stage in stages" ng-bind-html="stage | highlight:prepstage">
+    {{stage}}
+  </li>
+</ul>
+</div>
+<!--END OF CONTAINER DIV-->
+</div>
+<div class="container">
+<a ng-click="check()" data-toggle="modal" href="#myModal">Tillredning här!</a>
+
+ 
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+          <h4 class="modal-title">Påminnelse</h4>
+        </div>
+        <div class="modal-body">
+          <p>Kom ihåg att tvätta händerna före du börjar tillreda mat!</p>
+     <img id="wash" src="img/wash.png"></img>
+<!-- <aside class="big btn btn-danger btn-lg vertical-align" ng-click="back()" id="back" ng-show="back"><span class="icon-big glyphicon glyphicon-arrow-left"></span></aside>
+<aside class="big btn btn-success btn-lg vertical-align" ng-click="next()" id="next" ng-show="next"><span class="icon-big glyphicon glyphicon-arrow-right"></span></aside>
+      <div class="container">
+
+<div class="row">
+ <!--PREPARATIONIMAGE 1 AT A TIME-
+<div class="col-md-6">
+<img class="img-responsive" id="imgholder" ng-src={{prepimages}} ng-if="prepimages"></img>
+</div>
+<!--PREPARATIONSTAGE 1 AT A TIME--
+<div class="col-md-6">
+<ol class="recipe-preparation" ng-if="prepstage" >
+<li text={{prepstage}}>{{prepstage}}</li>
+</ol>
+</div>
+</div>
+</div>-->
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+ </div>
+<!--RECIPEWALKTHROUGH-->
+<div class="jumbotron" ng-show="visible" >
+<aside class="big btn btn-danger btn-lg vertical-align" ng-click="back()" id="back" ng-show="back"><span class="icon-big glyphicon glyphicon-arrow-left"></span></aside>
+<aside class="big btn btn-success btn-lg vertical-align" ng-click="next()" id="next" ng-show="next"><span class="icon-big glyphicon glyphicon-arrow-right"></span></aside>
+<div class="container">
+
+<div class="row">
+<!--PREPARATIONIMAGE 1 AT A TIME-->
+<div class="col-md-6">
+
+<img class="img-responsive" id="imgholder" ng-src={{prepimages}} ng-if="prepimages"></img>
+
+</div>
+<!--PREPARATIONSTAGE 1 AT A TIME-->
+<div class="col-md-6">
+<ol class="recipe-preparation" ng-if="prepstage" >
+<li text={{prepstage}}>{{prepstage}}</li>
+</ol>
+</div>
+</div>
+</div>
+</div>

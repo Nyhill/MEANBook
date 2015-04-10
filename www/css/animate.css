@@ -1,0 +1,88 @@
+.animate{
+	transition:2.5s linear all;
+}
+.animate.ng-enter{
+transition:0.5s;
+opacity:0;
+animate:fromLeft:1s;
+}
+.animate.ng-enter-stagger{
+  -webkit-transition-delay:100ms;
+  transition-delay:100ms;
+  -webkit-transition-duration:0;
+  transition-duration:0;
+}
+.animate.ng-enter-active{
+	opacity:1;
+	left:0;
+}
+.animate.ng-leave{
+transition:2.5s;
+opacity:1;
+}
+.animate.ng-leave-stagger{
+transition:0.1s;
+}
+.animate.ng-leave-active{
+	opacity:0;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-button:vertical:decrement {
+    background-image: url('cssimg/arrow-up.png'), -webkit-linear-gradient(left,  #f9f9f9 50%,#e2e2e2 100%) ;
+    background-repeat: no-repeat;
+    background-position: 1px 4px, 0 0;
+    
+}
+::-webkit-scrollbar-button:vertical:increment{
+    background-image: url('cssimg/arrow-down.png'), -webkit-linear-gradient(left,  #f9f9f9 50%,#e2e2e2 100%) ;
+    background-repeat: no-repeat;
+   background-position: 1px 5px, 0 0;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    background-color: #B8DBFF
+
+}
+
+  #imgholder {
+
+    position: relative;
+    -webkit-animation-name: slideleft; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    animation-name: slideleft;
+    animation-duration: 4s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes slideleft {
+    50%   { left:-500px; top:0px;}
+    75%  { left:0px; top:0px;}
+
+}
+  .recipe-preparation {
+
+    position: relative;
+    -webkit-animation-name: slideright; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    animation-name: slideright;
+    animation-duration: 4s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes slideright {
+    50%   { right:-500px; top:0px;}
+    75%  { right:0px; top:0px;}
+
+}
+
+ 
