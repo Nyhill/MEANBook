@@ -9,10 +9,29 @@ img{
 padding-right: 2px;    
 }
 a:hover img{
-   
+}
+h3 > small{
+  font-size:16px;
 }
 ol{
 list-style-type: none;
+}
+.panel-body{
+  height:275px;
+  background-color: #1A334C;
+}
+.mid{
+  position: relative; /* or absolute */
+  right: 50%;
+  left: 50%;
+}
+.breadcrumb, .input-group{
+  position: relative;
+  right:15%;
+  left: 85%;
+  width:125px;
+  background-color: #fff;
+   font-size:35px;
 }
 
 .ui-match { 
@@ -83,17 +102,16 @@ box-shadow: 0px 5px 5px #777, 0px -5px 5px #777;
 
 }
 
-.stages{
+.list-group{
 list-style-type: none;
 padding: 2px;
 margin: 0px;
-border:1px solid black;
 width:450px;
 height:300px;
 overflow:hidden;
 overflow-y:scroll;
 }
-.stages li{
+.list-group-item{
 position:relative;
 background-color:lightsteelblue;
  border-bottom:1px solid darkslategray;

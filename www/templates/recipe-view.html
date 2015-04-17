@@ -1,6 +1,6 @@
 <div class="container">
 <a ui-sref="recipes"><img ng-src={{recipeimg}}></img></a>
-<h3 ng-repeat="info in ingredientinfo track by $index">
+<h3> {{rname}}<br> <small>{{rdesc}}</small></h3>
  {{info}}
  </h3>
 <hr class="line" ></hr>
@@ -14,8 +14,8 @@
 </div>
 <!--STAGES-->
 <div class="col-md-6">
-<ul class="stages scrollbar" >
-  <li ng-repeat="stage in stages" ng-bind-html="stage | highlight:prepstage">
+<ul class="list-group" >
+  <li class="list-group-item" ng-repeat="stage in stages" ng-bind-html="stage | highlight:prepstage">
     {{stage}}
   </li>
 </ul>
@@ -23,7 +23,8 @@
 <!--END OF CONTAINER DIV-->
 </div>
 <div class="container">
-<a ng-click="check()" data-toggle="modal" href="#myModal">Tillredning här!</a>
+
+<!--<a class="btn btn-primary" ng-click="check()" data-toggle="modal" href="#myModal">Tillredning här!</a>
 
  
   <!-- Modal -->
@@ -61,8 +62,19 @@
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
  </div>
-<!--RECIPEWALKTHROUGH-->
-<div class="jumbotron" ng-show="visible" >
+
+<!--DROPDOWN PANEL-->
+<div class="panel-group" id="prep" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a ng-click="check()" data-toggle="collapse" data-parent="#prep" href="#prepdown" aria-expanded="true" aria-controls="prepdown">
+         <p class="mid"> Tillredning här!!</p>
+        </a>
+      </h4>
+    </div>
+    <div id="prepdown" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
 <aside class="big btn btn-danger btn-lg vertical-align" ng-click="back()" id="back" ng-show="back"><span class="icon-big glyphicon glyphicon-arrow-left"></span></aside>
 <aside class="big btn btn-success btn-lg vertical-align" ng-click="next()" id="next" ng-show="next"><span class="icon-big glyphicon glyphicon-arrow-right"></span></aside>
 <div class="container">
@@ -71,15 +83,17 @@
 <!--PREPARATIONIMAGE 1 AT A TIME-->
 <div class="col-md-6">
 
-<img class="img-responsive" id="imgholder" ng-src={{prepimages}} ng-if="prepimages"></img>
+<img class="img-responsive white" id="imgholder" ng-src={{prepimages}} ng-if="prepimages"></img>
 
 </div>
 <!--PREPARATIONSTAGE 1 AT A TIME-->
 <div class="col-md-6">
-<ol class="recipe-preparation" ng-if="prepstage" >
+<ol class="recipe-preparation white" ng-if="prepstage" >
 <li text={{prepstage}}>{{prepstage}}</li>
 </ol>
 </div>
 </div>
 </div>
-</div>
+      </div>
+    </div>
+  </div>

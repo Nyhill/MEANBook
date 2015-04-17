@@ -54,35 +54,4 @@ transition:0.1s;
 
 }
 
-  #imgholder {
-
-    position: relative;
-    -webkit-animation-name: slideleft; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
-    animation-name: slideleft;
-    animation-duration: 4s;
-}
-
-/* Chrome, Safari, Opera */
-@-webkit-keyframes slideleft {
-    50%   { left:-500px; top:0px;}
-    75%  { left:0px; top:0px;}
-
-}
-  .recipe-preparation {
-
-    position: relative;
-    -webkit-animation-name: slideright; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
-    animation-name: slideright;
-    animation-duration: 4s;
-}
-
-/* Chrome, Safari, Opera */
-@-webkit-keyframes slideright {
-    50%   { right:-500px; top:0px;}
-    75%  { right:0px; top:0px;}
-
-}
-
  

@@ -12,6 +12,7 @@ angular
 		.state('index', {
 			url:'/home',
 			templateUrl:'index.html'
+			
 
 		})
 		.state('recipes', {
