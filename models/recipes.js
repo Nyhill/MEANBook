@@ -33,4 +33,4 @@ var RecipeSchema = new Schema({
 	}
 });
 
-mongoose.model('newrecipes', RecipeSchema);
+mongoose.model('recipes', RecipeSchema);

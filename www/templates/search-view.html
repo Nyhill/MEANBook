@@ -1,3 +1,14 @@
+<div class="input-group">
+  <input type="number" class="form-control" placeholder="minuter" ng-model="countmin" aria-describedby="countdownmin">
+  </br>
+   <button class="btn btn-primary" ng-click="count(countmin)">Börja!</button></br>
+  <ol class="breadcrumb">
+  <li>{{countmin}}</li>
+  <li>{{countsec}}</li>
+</ol>
+  <!--<span class="input-group-addon" id="countdownmin">Minuter</span>-->
+
+</div>
 <div class="container">
 Sök ingredienser: <input type="text" ng-model="query">
 <button class="btn btn-primary" ng-click="search(query)">Sök!</button>
@@ -21,20 +32,9 @@ Sök ingredienser: <input type="text" ng-model="query">
 <ul class="bg">
 <a ui-sref="recipename"><img ng-src={{rimg3}} id="{{rname3}}" ng-click="trigger3(rname3)"></img></a>
 <h3 class="white">{{rname3}}</h3>
-<li ng-repeat="ingredient in ingredients3" ng-if="ingredient"></li>
+<li ng-repeat="ingredient in ingredients3" ng-bind-html="ingredient | highlight:query" ng-if="ingredient"></li>
 </ul>
 </div>
 </div>
 </div>
-</div>
-<div class="input-group">
-  <input type="number" class="form-control" placeholder="minuter" ng-model="countmin" aria-describedby="countdownmin">
-  </br>
-   <button class="btn btn-primary" ng-click="count(countmin)">Börja!</button></br>
-  <ol class="breadcrumb">
-  <li>{{countmin}}</li>
-  <li>{{countsec}}</li>
-</ol>
-  <!--<span class="input-group-addon" id="countdownmin">Minuter</span>-->
-
 </div>

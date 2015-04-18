@@ -17,7 +17,7 @@ ol{
 list-style-type: none;
 }
 .panel-body{
-  height:275px;
+  height:325px;
   background-color: #1A334C;
 }
 .mid{
@@ -25,14 +25,16 @@ list-style-type: none;
   right: 50%;
   left: 50%;
 }
-.breadcrumb, .input-group{
-  position: relative;
+.breadcrumb,.input-group{
+  
   right:15%;
   left: 85%;
   width:125px;
   background-color: #fff;
-   font-size:35px;
+   font-size:30px;
+
 }
+
 
 .ui-match { 
 color: #FF5050; 
